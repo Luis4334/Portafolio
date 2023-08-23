@@ -1,0 +1,110 @@
+|<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Responsive Fixed Animated NavBar</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="estilos.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img id="logo" src="logo.png" style="max-width: 75px;height: auto;"></a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Tu Resultado</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contactanos </a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+    <section class="home">
+        <section id="container-slider">    
+            <a href="javascript: funcionEjecutar('anterior');" class="arrowPrev"><i class="fas fa-chevron-circle-left"></i></a>
+            <a href="javascript: funcionEjecutar('siguiente');" class="arrowNext"><i class="fas fa-chevron-circle-right"></i></a>
+            <ul class="listslider">
+              <li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
+              <li><a itlist="itList_1" href="#"></a></li>
+              <li><a itlist="itList_2" href="#"></a></li>
+            </ul>
+            <ul id="slider">
+              <li style="background-image: url('imagenes/01.jpg'); z-index:0; opacity: 1;">
+                <div class="content_slider" >
+                  <div>
+                    <h2>Imagen 1</h2>
+                <p>Escribe el texto que aparecerá sobre la imagen número 1.</p>
+                <a href="https://www.migueltroyano.com" target="_blank" class="btnSlider">Acceder</a>
+              </div>
+                </div>
+              </li>
+              <li style="background-image: url('imagenes/02.jpg'); ">
+                <div class="content_slider" >
+                  <div>
+                    <h2>Imagen 2</h2>
+                <p>Escribe el texto que aparecerá sobre la imagen número 2</p>
+                <a href="https://www.migueltroyano.com" target="_blank" class="btnSlider">Acceder</a>
+              </div>
+                </div>
+              </li>
+              <li style="background-image: url('imagenes/03.jpg'); ">
+                <div class="content_slider" >
+                  <div>
+                    <h2>Imagen 3</h2>
+                <p>Escribe el texto que aparecerá sobre la imagen número 3</p>
+                <a href="https://www.migueltroyano.com" target="_blank" class="btnSlider">Acceder</a>
+              </div>
+                </div>
+              </li>
+           </ul>
+         </section>
+    </section>
+    <div style="height: 1000px">
+        <!-- just to make scrolling effect possible -->
+			<h2 class="myH2">What is this ?</h2>
+			<p class="myP">This is a responsive fixed navbar animated on scroll</p>
+			<p class="myP">I took inspiration from  ABDO STEIF (<a href="https://codepen.io/abdosteif/pen/bRoyMb?editors=1100">https://codepen.io/abdosteif/pen/bRoyMb?editors=1100</a>)
+			and Dicson <a href="https://codepen.io/dicson/pen/waKPgQ">(https://codepen.io/dicson/pen/waKPgQ)</a></p>
+			<p class="myP">I HOPE YOU FIND THIS USEFULL</p>
+			<p class="myP">Albi</p>
+				<p class="myP">
+				
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ratione facere animi impedit rem labore sint repellendus ipsa sapiente voluptatem aut excepturi quo itaque, ab earum cumque. Voluptatem beatae id inventore quod voluptate qui deserunt, quis placeat, tempora ex totam, dolore sequi harum eos voluptatibus animi labore officiis minus laboriosam
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ratione facere animi impedit rem labore sint repellendus ipsa sapiente voluptatem aut excepturi quo itaque, ab earum cumque. Voluptatem beatae id inventore quod voluptate qui deserunt, quis placeat, tempora ex totam, dolore sequi harum eos voluptatibus animi labore officiis minus laboriosam
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ratione facere animi impedit rem labore sint repellendus ipsa sapiente voluptatem aut excepturi quo itaque, ab earum cumque. Voluptatem beatae id inventore quod voluptate qui deserunt, quis placeat, tempora ex totam, dolore sequi harum eos voluptatibus animi labore officiis minus laboriosam
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ratione facere animi impedit rem labore sint repellendus ipsa sapiente voluptatem aut excepturi quo itaque, ab earum cumque. Voluptatem beatae id inventore quod voluptate qui deserunt, quis placeat, tempora ex totam, dolore sequi harum eos voluptatibus animi labore officiis minus laboriosam
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ratione facere animi impedit rem labore sint repellendus ipsa sapiente voluptatem aut excepturi quo itaque, ab earum cumque. Voluptatem beatae id inventore quod voluptate qui deserunt, quis placeat, tempora ex totam, dolore sequi harum eos voluptatibus animi labore officiis minus laboriosam
+			</p>
+    </div>
+
+<!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
